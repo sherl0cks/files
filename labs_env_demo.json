@@ -26,6 +26,11 @@
 								"name": "jenkins-master",
 								"scm_url": "https://github.com/rht-labs/openshift-jenkins-s2i-config.git",
 								"base_image": "openshift/jenkins"
+							},
+							{
+								"name": "api",
+								"scm_url": "https://github.com/sherl0cks/files.git",
+								"base_image": "openshift/php"
 							}
 						]
 					},
@@ -37,6 +42,14 @@
 							{
 								"name": "infographic",
 								"base_image": "infographic"
+							},
+							{
+								"name": "api",
+								"base_image": "api"
+							}
+							,{
+								"name": "jenkins-master",
+								"base_image": "jenkins-master"
 							}
 						]
 					},
@@ -48,6 +61,14 @@
 							{
 								"name": "infographic",
 								"base_image": "infographic"
+							},
+							{
+								"name": "api",
+								"base_image": "api"
+							}
+							,{
+								"name": "jenkins-master",
+								"base_image": "jenkins-master"
 							}
 						]
 					}
