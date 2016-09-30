@@ -2,8 +2,8 @@
 	"openShift_clusters": [
 		{
 			"id": 1,
-			"openShift_host_env": "10.1.2.2:8443",
-			"userId": "admin",
+			"openShift_host_env": "master1.env2-1.etl.rht-labs.com:8443",
+			"userId": "jholmes",
 			"openShift_resources": {
 				"projects": [
 					{
@@ -11,17 +11,6 @@
 						"display_name": "Temp Dev CI Support",
 						"build_environment": true,
 						"apps": [
-							{
-								"name": "infographic",
-								"scm_url": "https://github.com/rht-labs/infographic.git",
-								"context_dir": "website",
-								"base_image": "openshift/php",
-								"build_tool": "node-4",
-								"build_application_commands": [
-									"npm install",
-									"npm run-script ci"
-								]
-							},
 							{
 								"name": "jenkins-master",
 								"scm_url": "https://github.com/rht-labs/openshift-jenkins-s2i-config.git",
@@ -40,14 +29,10 @@
 						"promotion_environment": true,
 						"apps": [
 							{
-								"name": "infographic",
-								"base_image": "infographic"
-							},
-							{
 								"name": "api",
 								"base_image": "api"
-							}
-							,{
+							},
+							{
 								"name": "jenkins-master",
 								"base_image": "jenkins-master"
 							}
@@ -59,14 +44,10 @@
 						"promotion_environment": true,
 						"apps": [
 							{
-								"name": "infographic",
-								"base_image": "infographic"
-							},
-							{
 								"name": "api",
 								"base_image": "api"
-							}
-							,{
+							},
+							{
 								"name": "jenkins-master",
 								"base_image": "jenkins-master"
 							}
