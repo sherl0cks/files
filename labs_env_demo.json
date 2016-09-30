@@ -19,7 +19,8 @@
 							{
 								"name": "api",
 								"scm_url": "https://github.com/sherl0cks/files.git",
-								"base_image": "openshift/php"
+								"base_image": "openshift/php",
+								"build_tool": "sh"
 							}
 						]
 					},
