@@ -1,0 +1,54 @@
+{
+	"openshift_clusters": [
+		{
+			"openshift_host_env": "master1.a1.core.rht-labs.com:8443",
+			"openshift_resources": {
+				"projects": [
+					{
+						"name": "labs-api-dev",
+						"display_name": "Labs API - Dev",
+						"environment_type": "build",
+						"apps": [
+							{
+								"name": "automation-api",
+								"scm_url": "https://github.com/rht-labs/automation-api.git",
+								"build_tool": "mvn-3",
+								"build_application_commands": [
+									"mvn clean install"
+								],
+                                "build_image_commands" : [
+                                    "mvn fabric8:build"
+                                ],
+                                "deploy_image_commands" : [
+                                    "mvn fabric8:deploy"
+                                ]
+							}
+						]
+					},
+					{
+						"name": "labs-api-uat",
+						"display_name": "Labs API - UAT",
+						"environment_type": "promotion",
+						"apps": [
+							{
+								"name": "automation-api",
+								"base_image": "automation-api"
+							}
+						]
+					},
+					{
+						"name": "labs-api-uat",
+						"display_name": "Labs API - Delivery",
+						"environment_type": "promotion",
+						"apps": [
+							{
+								"name": "automation-api",
+								"base_image": "automation-api"
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}
