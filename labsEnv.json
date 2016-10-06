@@ -1,15 +1,15 @@
 {
-	"openShift_clusters": [
+	"openshift_clusters": [
 		{
 			"id": 1,
-			"openShift_host_env": "10.1.2.2:8443",
+			"openshift_host_env": "10.1.2.2:8443",
 			"userId" : "admin",
-			"openShift_resources": {
+			"openshift_resources": {
 				"projects": [
 					{
 						"name": "ci-dev",
 						"display_name": "Temp Dev CI Support",
-						"build_environment": true,
+						"environment_type": "build",
 						"apps": [
 							{
 								"name": "infographic-node-app",
@@ -37,7 +37,7 @@
 					{
 						"name": "ci-stage",
 						"display_name": "Temp Stage CI Support",
-						"promotion_environment": true,
+						"environment_type": "promotion",
 						"apps": [
 							{
 								"name": "infographic",
@@ -52,7 +52,7 @@
 					{
 						"name": "ci-prod",
 						"display_name": "Temp Prod CI Support",
-						"promotion_environment": true,
+						"environment_type": "promotion",
 						"apps": [
 							{
 								"name": "infographic",
