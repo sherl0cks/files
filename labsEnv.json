@@ -2,7 +2,7 @@
 	"openshift_clusters": [
 		{
 			"id": 1,
-			"openshift_host_env": "10.1.2.2:8443",
+			"openshift_host_env": "master1.a1.core.rht-labs.com:8443",
 			"userId" : "admin",
 			"openshift_resources": {
 				"projects": [
