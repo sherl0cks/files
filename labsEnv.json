@@ -1,7 +1,6 @@
 {
 	"openshift_clusters": [
 		{
-			"id": 1,
 			"openshift_host_env": "master1.a1.core.rht-labs.com:8443",
 			"userId" : "admin",
 			"openshift_resources": {
@@ -11,16 +10,6 @@
 						"display_name": "Temp Dev CI Support",
 						"environment_type": "build",
 						"apps": [
-							{
-								"name": "infographic-node-app",
-								"scm_url": "https://github.com/rht-labs/infographic-node-app.git",
-								"base_image": "openshift/nodejs",
-								"build_tool": "node-4",
-								"build_application_commands": [
-									"npm install",
-									"npm run-script ci"
-								]
-							},
 							{
 								"name": "infographic",
 								"scm_url": "https://github.com/rht-labs/infographic.git",
@@ -42,10 +31,6 @@
 							{
 								"name": "infographic",
 								"base_image": "infographic"
-							},
-							{
-								"base_image": "infographic-node-app",
-								"name": "infographic-node-app"
 							}
 						]
 					},
@@ -57,10 +42,6 @@
 							{
 								"name": "infographic",
 								"base_image": "infographic"
-							},
-							{
-								"base_image": "infographic-node-app",
-								"name": "infographic-node-app"
 							}
 						]
 					}
