@@ -14,8 +14,12 @@
 								"scm_url": "https://github.com/rht-labs/automation-api.git",
 								"build_tool": "mvn-3",
 								"build_application_commands": [
-									"mvn clean install fabric8:build"
-								]
+									"mvn clean install"
+								],
+                                "build_image_commands" : [
+                                    "oc login master1.a1.core.rht-labs.com:8443 --token=$OPENSHIFT_API_TOKEN",
+                                    "mvn fabric8:build"
+                                ]
 							}
 						]
 					},
