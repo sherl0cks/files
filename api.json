@@ -14,14 +14,8 @@
 								"scm_url": "https://github.com/rht-labs/automation-api.git",
 								"build_tool": "mvn-3",
 								"build_application_commands": [
-									"mvn clean install"
-								],
-                                "build_image_commands" : [
-                                    "mvn fabric8:build"
-                                ],
-                                "deploy_image_commands" : [
-                                    "mvn fabric8:deploy"
-                                ]
+									"mvn clean install fabric8:build"
+								]
 							}
 						]
 					},
