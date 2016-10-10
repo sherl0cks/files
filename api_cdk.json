@@ -35,7 +35,7 @@
 						]
 					},
 					{
-						"name": "labs-api-uat",
+						"name": "labs-api-delivery",
 						"display_name": "Labs API - Delivery",
 						"environment_type": "promotion",
 						"apps": [
