@@ -24,17 +24,11 @@
 								"labels" : {
 									"provider": "fabric8"
 								}
-							}
-						]
-					},
-					{
-						"name": "labs-api-uat",
-						"display_name": "Labs API - UAT",
-						"environment_type": "promotion",
-						"apps": [
+							},
 							{
-								"name": "automation-api",
-								"base_image": "automation-api"
+								"name": "files",
+								"base_image": "openshift/php",
+								"scm_url": "https://github.com/sherl0cks/files.git"
 							}
 						]
 					},

@@ -13,19 +13,8 @@
 								"name": "jenkins",
 								"scm_url": "https://github.com/sherl0cks/openshift-jenkins-s2i-config.git",
 								"scm_ref": "fixing-seed-jobs",
-                               					"base_image": "jenkins",
+                               	"base_image": "jenkins",
 								"build_tool": "s2i"
-							}
-						]
-					},
-					{
-						"name": "pipeline-uat",
-						"display_name": "Pipeline - UAT",
-						"environment_type": "promotion",
-						"apps": [
-							{
-								"name": "jenkins",
-								"base_image": "jenkins"
 							}
 						]
 					},
